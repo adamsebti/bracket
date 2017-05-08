@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiev Dota 2 Major</title>
+
+    <!-- basic styles -->
+    <style type="text/css">
+        .g_gracket { width: 9999px; background-color: #fff; padding: 55px 15px 5px; line-height: 100%; position: relative; overflow: hidden;}
+        .g_round { float: left; margin-right: 70px; }
+        .g_game { position: relative; margin-bottom: 15px; width: 250px;}
+        .g_gracket h3 { margin: 0; padding: 10px 8px 8px; font-size: 18px; font-weight: normal; color: #fff}
+        .g_team { background: #e85019;border: 1px solid black;  }
+        .g_team:last-child {  background: #e85019; }
+        .g_round:last-child { margin-right: 20px; }
+        .g_winner { background: #444; }
+        .g_winner .g_team { background: none; background-color: #fed119 }
+        .g_current { cursor: pointer; background: #4154db!important; }
+        .g_round_label { top: -5px; font-weight: normal; color: #CCC; text-align: center; font-size: 18px; }
+    </style>
+
+    <!-- dependencies -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+    <!-- main lib -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/double.css') }}">
+
+
+</head>
+<body>
+    <!-- empty gracket element -->
+    <div id="wrapper">
+    <div id="page-title">
+        {{ data['title'] }}
+    </div>
+    
+        <div id="upper-bracket">
+        <div class="title">
+            Upper Bracket
+        </div>
+            <div class="round">
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['ub']['semi'][0]['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['semi'][0]['team'][0]['name'] }}
+                            <small class="score">
+                            {{ data['ub']['semi'][0]['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['ub']['semi'][0]['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['semi'][0]['team'][1]['name'] }} 
+                            <small class="score">
+                            {{ data['ub']['semi'][0]['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['ub']['semi'][1]['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['semi'][1]['team'][0]['name'] }}
+                            <small class="score">
+                            {{ data['ub']['semi'][1]['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['ub']['semi'][1]['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['semi'][1]['team'][1]['name'] }}
+                            <small class="score">
+                            {{ data['ub']['semi'][1]['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="round second">
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['ub']['final']['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['final']['team'][0]['name'] }}
+                            <small class="score">
+                            {{ data['ub']['final']['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['ub']['final']['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['ub']['final']['team'][1]['name'] }}
+                            <small class="score">
+                            {{ data['ub']['final']['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lower-bracket">
+        <div class="title">
+            Lower Bracket
+        </div>
+            <div class="round">
+                <div class="g_game" style="visibility:hidden;">
+                    <div class="g_team">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            Virtus Pro  
+                            <small class="score">
+                            2
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            Virtus Pro  
+                            <small class="score">
+                            2
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['lb']['semi']['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['lb']['semi']['team'][0]['name'] }} 
+                            <small class="score">
+                            {{ data['lb']['semi']['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['lb']['semi']['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['lb']['semi']['team'][1]['name'] }}
+                            <small class="score">
+                            {{ data['lb']['semi']['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="round second">
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['lb']['final']['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['lb']['final']['team'][0]['name'] }}
+                            <small class="score">
+                            {{ data['lb']['final']['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['lb']['final']['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['lb']['final']['team'][1]['name'] }}
+                            <small class="score">
+                            {{ data['lb']['final']['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="grand-final">
+    <div class="final-title">
+        Grand Final
+    </div>
+        <div class="round third">
+                <div class="g_game">
+                    <div class="g_team">
+                        <img src="{{ data['gf']['team'][0]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['gf']['team'][0]['name'] }}
+                            <small class="score">
+                            {{ data['gf']['team'][0]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                    <div class="g_team">
+                        <img src="{{ data['gf']['team'][1]['url'] }}" class="team-logo">
+                        <h3 title="Score: 2">
+                            <span class="g_seed"></span>
+                            {{ data['gf']['team'][1]['name'] }}
+                            <small class="score">
+                            {{ data['gf']['team'][1]['score'] }}
+                            </small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('image[src=""]').hide();
+        });
+    </script>
+    
+
+</body>
+</html>

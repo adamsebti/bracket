@@ -1,0 +1,31 @@
+.team-logo {
+	float: left;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.score {
+	float: right;
+    margin-right: 5px;
+}
+
+#left-column{
+	width: 200px;
+    float: left;
+    position: absolute;
+    text-align: center;
+}
+
+.title{
+	font-weight: normal; color: #CCC; text-align: center; font-size: 18px;
+	margin-top: 20px; }
+}
+
+a{
+	text-decoration: none;
+}
+
+.substage {
+	margin-top: 20px;
+}

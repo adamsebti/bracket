@@ -1,0 +1,96 @@
+#upper-bracket {
+	height: 40%;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#lower-bracket {
+	height: 45%;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+h3 {
+	margin: 0;
+    padding: 10px 8px 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.score{
+	float: right;
+    margin-right: 5px;
+}
+
+.round{
+	margin-left: 50px;
+	margin-top: 50px;
+	float: left;
+}
+
+.second {
+	margin-top: 100px;
+	margin-left: 150px;
+}
+
+#grand-final{
+	float: left;
+	width: 40%;
+	height: 100%;
+}
+
+#wrapper {
+	overflow: hidden;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.third{
+	margin-top: 150px;
+	margin-left: 150px;
+}
+
+.title{
+	font-size: 18px;
+	margin-left: 300px;
+	margin-top: 50px;
+	font-weight: 500;
+	color: #CCC;
+
+}
+
+.final-title{
+	font-size: 18px;
+	margin-left: 200px;
+	margin-top: 200px;
+	color: #CCC;
+
+}
+
+#page-title{
+	font-weight: 800;
+	font-size: 22px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.team-logo{
+	float: left;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+
